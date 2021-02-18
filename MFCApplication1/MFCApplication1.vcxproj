@@ -80,6 +80,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>../bin/</OutDir>
+    <IncludePath>.\opencv\opencv\build\include;.\opencv\opencv\build\include\opencv;.\opencv\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
+    <LibraryPath>.\opencv\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -119,13 +121,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>D:\研究生\工厂项目\testproject\3MFC_image_succeed\1MFC_image_encode_flow\1MFC_image_encode_flow\MFCApplication1\MFCApplication1;D:\1MFC_image_encode_flow\1MFC_image_encode_flow\MFCApplication1;.\inc\plx_x64;.\ChartCtrl;.\inc\include;.\inc;.\halcon-include\halconcpp;.\halcon-include\;..\inc_shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>include.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.\inc\plx_x64;.\ChartCtrl;.\inc\include;.\inc;.\halcon-include\halconcpp;.\halcon-include\;..\inc_shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>.\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>GrabForDaHua.lib;halconcpp.lib;Inspection.lib;SkinPPWTL.lib;PlxApi.lib;Lock1.lib;LTDMC.lib;MVSDKmd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>GrabForDaHua.lib;halconcpp.lib;Inspection.lib;SkinPPWTL.lib;PlxApi.lib;Lock1.lib;LTDMC.lib;MVSDKmd.lib;opencv_world341d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Midl>
@@ -194,26 +196,43 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CamCtrl.h" />
     <ClInclude Include="CirQue.h" />
+    <ClInclude Include="Encoder.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="init.h" />
+    <ClInclude Include="HardParameterDlg.h" />
+    <ClInclude Include="ImgDetection.h" />
+    <ClInclude Include="include.h" />
+    <ClInclude Include="InfraredSensor.h" />
+    <ClInclude Include="Init.h" />
+    <ClInclude Include="LED.h" />
     <ClInclude Include="LTDMC.h" />
     <ClInclude Include="MFCApplication1.h" />
     <ClInclude Include="MFCApplication1Dlg.h" />
+    <ClInclude Include="Motor.h" />
+    <ClInclude Include="MyCamera.h" />
+    <ClInclude Include="MyThread.h" />
     <ClInclude Include="obj.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Spout.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CamCtrl.cpp" />
+    <ClCompile Include="CallBack.cpp" />
     <ClCompile Include="CirQue.cpp" />
+    <ClCompile Include="Encoder.cpp" />
     <ClCompile Include="FileInfo.cpp" />
-    <ClCompile Include="Init.cpp" />
+    <ClCompile Include="HardParameterDlg.cpp" />
+    <ClCompile Include="ImgDetection.cpp" />
+    <ClCompile Include="InfraredSensor.cpp" />
+    <ClCompile Include="LED.cpp" />
     <ClCompile Include="MFCApplication1.cpp" />
     <ClCompile Include="MFCApplication1Dlg.cpp" />
+    <ClCompile Include="Motor.cpp" />
+    <ClCompile Include="MyCamera.cpp" />
+    <ClCompile Include="MyThread.cpp" />
     <ClCompile Include="obj.cpp" />
+    <ClCompile Include="Spout.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +242,41 @@
     <None Include="res\MFCApplication1.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\logo.png" />
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="res\bitmap_cam.bmp" />
+    <Image Include="res\bitmap_camera_config.bmp" />
+    <Image Include="res\bitmap_exit.bmp" />
+    <Image Include="res\bitmap_exit_disable.bmp" />
+    <Image Include="res\bitmap_exit_down.bmp" />
+    <Image Include="res\bitmap_exit_move.bmp" />
+    <Image Include="res\bitmap_flow1.bmp" />
+    <Image Include="res\bitmap_flow2.bmp" />
+    <Image Include="res\bitmap_infor.bmp" />
+    <Image Include="res\bitmap_io_test.bmp" />
+    <Image Include="res\bitmap_io_test_disabled.bmp" />
+    <Image Include="res\bitmap_OKclose.bmp" />
+    <Image Include="res\bitmap_OKopen.bmp" />
+    <Image Include="res\bitmap_pause.bmp" />
+    <Image Include="res\bitmap_pause_disable.bmp" />
+    <Image Include="res\bitmap_pause_down.bmp" />
+    <Image Include="res\bitmap_pause_move.bmp" />
+    <Image Include="res\bitmap_reset.bmp" />
+    <Image Include="res\bitmap_start.bmp" />
+    <Image Include="res\bitmap_start_disable.bmp" />
+    <Image Include="res\bitmap_start_down.bmp" />
+    <Image Include="res\bitmap_start_move.bmp" />
+    <Image Include="res\bitmap_stop.bmp" />
+    <Image Include="res\bitmap_stop_disable.bmp" />
+    <Image Include="res\bitmap_stop_down.bmp" />
+    <Image Include="res\bitmap_stop_move.bmp" />
+    <Image Include="res\bitmap_sys_config.bmp" />
+    <Image Include="res\bitmap_warning.bmp" />
+    <Image Include="res\bitmap_warning1.bmp" />
+    <Image Include="res\bitmap_warning2.bmp" />
+    <Image Include="res\bitmap_warning3.bmp" />
+    <Image Include="res\logo.bmp" />
     <Image Include="res\MFCApplication1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

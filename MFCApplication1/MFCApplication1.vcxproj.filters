@@ -13,12 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Hard">
+      <UniqueIdentifier>{c41cee8a-91af-46f5-9e64-8ff3c96e610d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Dialog">
+      <UniqueIdentifier>{ddf1e5fb-d393-4904-979f-c4f71aa9785a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ImageProcess">
+      <UniqueIdentifier>{bf8768ca-22f1-4e31-8cd9-dfa30c037652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Soft">
+      <UniqueIdentifier>{94c6edd6-cca2-41ef-a089-d5327276e3ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Hard">
+      <UniqueIdentifier>{611f9075-67e2-4e8c-8c7e-dd95e0124414}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Soft">
+      <UniqueIdentifier>{bba80ec5-390c-4fa3-9724-a3c364259f68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Dialog">
+      <UniqueIdentifier>{b81d67ce-f4ab-4939-b7d7-4eb230913b11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\ImageProcess">
+      <UniqueIdentifier>{2b7d9c2b-cc16-4bb1-925d-af7ed6d6b8f2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MFCApplication1.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MFCApplication1Dlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -30,49 +51,103 @@
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="LTDMC.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="init.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="LTDMC.h">
+      <Filter>头文件\Hard</Filter>
+    </ClInclude>
+    <ClInclude Include="ImgDetection.h">
+      <Filter>头文件\ImageProcess</Filter>
+    </ClInclude>
     <ClInclude Include="CirQue.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\Soft</Filter>
+    </ClInclude>
+    <ClInclude Include="MFCApplication1Dlg.h">
+      <Filter>头文件\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="Motor.h">
+      <Filter>头文件\Hard</Filter>
+    </ClInclude>
+    <ClInclude Include="MyCamera.h">
+      <Filter>头文件\Hard</Filter>
+    </ClInclude>
+    <ClInclude Include="MyThread.h">
+      <Filter>头文件\Soft</Filter>
+    </ClInclude>
+    <ClInclude Include="Spout.h">
+      <Filter>头文件\Hard</Filter>
     </ClInclude>
     <ClInclude Include="obj.h">
+      <Filter>头文件\Soft</Filter>
+    </ClInclude>
+    <ClInclude Include="Encoder.h">
+      <Filter>头文件\Hard</Filter>
+    </ClInclude>
+    <ClInclude Include="InfraredSensor.h">
+      <Filter>头文件\Hard</Filter>
+    </ClInclude>
+    <ClInclude Include="Init.h">
+      <Filter>头文件\Soft</Filter>
+    </ClInclude>
+    <ClInclude Include="LED.h">
+      <Filter>头文件\Hard</Filter>
+    </ClInclude>
+    <ClInclude Include="include.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CamCtrl.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="HardParameterDlg.h">
+      <Filter>头文件\Dialog</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Motor.cpp">
+      <Filter>源文件\Hard</Filter>
+    </ClCompile>
+    <ClCompile Include="MyCamera.cpp">
+      <Filter>源文件\Hard</Filter>
+    </ClCompile>
+    <ClCompile Include="Spout.cpp">
+      <Filter>源文件\Hard</Filter>
+    </ClCompile>
+    <ClCompile Include="ImgDetection.cpp">
+      <Filter>源文件\ImageProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="MFCApplication1Dlg.cpp">
+      <Filter>源文件\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MyThread.cpp">
+      <Filter>源文件\Soft</Filter>
+    </ClCompile>
+    <ClCompile Include="obj.cpp">
+      <Filter>源文件\Soft</Filter>
+    </ClCompile>
+    <ClCompile Include="CirQue.cpp">
+      <Filter>源文件\Soft</Filter>
+    </ClCompile>
+    <ClCompile Include="CallBack.cpp">
+      <Filter>源文件\ImageProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="FileInfo.cpp">
+      <Filter>源文件\ImageProcess</Filter>
+    </ClCompile>
     <ClCompile Include="MFCApplication1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MFCApplication1Dlg.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="Encoder.cpp">
+      <Filter>源文件\Hard</Filter>
     </ClCompile>
-    <ClCompile Include="Init.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="InfraredSensor.cpp">
+      <Filter>源文件\Hard</Filter>
     </ClCompile>
-    <ClCompile Include="FileInfo.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="LED.cpp">
+      <Filter>源文件\Hard</Filter>
     </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="obj.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CirQue.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CamCtrl.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="HardParameterDlg.cpp">
+      <Filter>源文件\Dialog</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +162,111 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\MFCApplication1.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_camera_config.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_exit.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_exit_disable.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_exit_down.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_exit_move.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_io_test.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_io_test_disabled.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_pause.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_pause_disable.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_pause_down.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_pause_move.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_reset.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_start.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_start_disable.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_start_down.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_start_move.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_stop.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_stop_disable.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_stop_down.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_stop_move.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_sys_config.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_warning.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_warning1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_warning2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_warning3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\logo.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\logo.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_cam.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_flow1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_flow2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_infor.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_OKclose.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap_OKopen.bmp">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

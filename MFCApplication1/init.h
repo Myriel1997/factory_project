@@ -1,27 +1,31 @@
 #ifndef INIT_H
 #define INIT_H
 
+
+#include "MFCApplication1Dlg.h"
+#include "HObject.h"
+
 #define CAMNUM 4
 #define QUESIZE 50
 #define OK		-1
 #define UN		1
 #define	NG		0
 
-#include "DHGrabExport.h"
-#include "CirQue.h"
-#include "obj.h"
+#define pulseToBlowOK	84500
+#define pulseToBlowNG	113000
+#define pulseToCam0		16500
+#define pulseToCam1		29900
+#define pulseToCam2		44000
+#define pulseToCam3		61800
 
-#define pulseToBlowOK	79000
-#define pulseToBlowNG	110000
-#define pulseToCam0		11000
-#define pulseToCam1		25000
-#define pulseToCam2		41000
-#define pulseToCam3		57000
+#define pulseToClassify	76000
 
-void motorInit();
-void sortingInit();
-void cameraInit();
-void  __stdcall CallBackN(HObject&img, void* pUserData, HTuple* pNumber);
+#define timeToKill		400
+#define timeFlow		50
+
+#define	stateStart		1
+#define statePause		0
+
+void  __stdcall CallBackN(HObject& img, void* pUserData, HTuple* pNumber);
 
 #endif // !INIT_H
-

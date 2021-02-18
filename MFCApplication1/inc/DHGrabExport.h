@@ -3,7 +3,7 @@
 #include "CCDCtrl.h"
 
 
-#include "HalconCpp.h";
+#include "HalconCpp.h"
 
 #include <string.h>
 
